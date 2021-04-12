@@ -1,5 +1,5 @@
 # Java Elevator Simulator Project:
-Dante D’Amico
+Dante D’Amico 
 John Gazzara
 Matt Ross
 
