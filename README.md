@@ -30,8 +30,8 @@ Interacting with the call buttons decides which elevator to dispatch
 2. Making movement logic work 
 3. Displaying movement 
 4. Extra features 
-- Processing integration 
-- Client/Server Interaction
+  - Processing integration 
+  - Client/Server Interaction
 
 ### How you will divide up work amongst the team members:
 - John Gazzara - Team Leader
