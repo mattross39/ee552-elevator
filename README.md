@@ -19,32 +19,32 @@ Interacting with the call buttons decides which elevator to dispatch
 - Animation of the elevator movement
 - Implement each control panel as a client-server interaction
 
-### Project Plan:
-Key components of your system:
+# Project Plan:
+### Key components of your system:
 - Internal Control Panel 
 - External Up/Down Buttons
 - Elevator Position Display
 
 ### Key milestones you can target for each of the weeks:
-Week 1: Building basic interface
-Week 2: Making movement logic work 
-Week 3: Displaying movement 
-Week 4: Extra features 
-Processing integration 
-Client/Server Interaction
+1. Building basic interface
+2. Making movement logic work 
+3. Displaying movement 
+4. Extra features 
+- Processing integration 
+- Client/Server Interaction
 
 ### How you will divide up work amongst the team members:
-John Gazzara - Team Leader
-Work on programming together during meeting times 
-Repository Sharing
-Can’t assign individual parts to members, we will all work simultaneously
+- John Gazzara - Team Leader
+- Work on programming together during meeting times 
+- Repository Sharing
+- Can’t assign individual parts to members, we will all work simultaneously
 
 ### Assumptions you are making about the project:
-No mechanical failure
-Will function as intended to in real life
-Pressed buttons will depress 
-Doors not necessary
+- No mechanical failure
+- Will function as intended to in real life
+- Pressed buttons will depress 
+- Doors not necessary
 
 ### Any requirements from the project description that are unclear or that you are not sure how to approach:
-Client/Server Interaction
-Breaking up the work by person is not optimal
+- Client/Server Interaction
+- Breaking up the work by person is not optimal
