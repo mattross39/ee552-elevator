@@ -16,14 +16,14 @@ Interactions with the control panel and call buttons cause the elevators to move
 Interacting with the call buttons decides which elevator to dispatch
 
 ### Additional Features:
-Animation of the elevator movement
-Implement each control panel as a client-server interaction
+- Animation of the elevator movement
+- Implement each control panel as a client-server interaction
 
 ### Project Plan:
 Key components of your system:
-Internal Control Panel 
-External Up/Down Buttons
-Elevator Position Display
+- Internal Control Panel 
+- External Up/Down Buttons
+- Elevator Position Display
 
 ### Key milestones you can target for each of the weeks:
 Week 1: Building basic interface
