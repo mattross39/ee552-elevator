@@ -1,7 +1,12 @@
 public class ExternalPanel {
     boolean button;
+    public int floor;
 
+    ExternalPanel(int floor) {
+        this.floor = floor;
+    }
     void buttonPressed(boolean button){
-            Elevator.findElevator();
+        //? Not sure if this should be called here or in elevator
+        //Elevator.findNearest();
     }
 }
