@@ -1,17 +1,25 @@
 class Elevator {
  private int x;
  private int speed;
- private double target;
+ public double target = 500;
  private double floor = 500;
- //floor3 = 100;
- //floor2 = 300;
- //floor1 = 500;
- private boolean busy = false;
+ public boolean busy = false;
  
- Elevator(int x,double target){
+ Elevator(int x){
    this.x = x;
    this.speed = 5;
-   this.target = target;
+ }
+ 
+ int floor(){
+  if(floor < 150){
+      return 3;
+    }
+    else if(floor >= 150 && floor <350){
+      return 2;
+    }
+    else{
+      return 1;
+    }
  }
  
  void draw(){
@@ -20,9 +28,10 @@ class Elevator {
             floor = floor - speed; 
         } else if (target > floor) {
             busy = true;
+            
             floor = floor + speed;
         } else {
-            busy = false;
+          busy = false;
         }
     
     fill(200);
@@ -30,4 +39,5 @@ class Elevator {
     rect(x+24,(float)floor+20, 24, 80);
     
  }
+ 
 }
