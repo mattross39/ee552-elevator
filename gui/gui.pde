@@ -26,15 +26,15 @@ void setup() {
   obutton1 = new Outside_Button(width/5*1-40,height/4-60,15,35);
   obutton2 = new Outside_Button(width/5*1-40,height/4*2-60,15,35);
   obutton3 = new Outside_Button(width/5*1-40,height/4*3-60,15,35);
-  ibutton1 = new Inside_Button(width/4*1+5,625,35,35);
-  ibutton2 = new Inside_Button(width/4*1+5,645,35,35);
-  ibutton3 = new Inside_Button(width/4*1+5,665,35,35);
-  ibutton4 = new Inside_Button(width/4*2+5,625,35,35);
-  ibutton5 = new Inside_Button(width/4*2+5,645,35,35);
-  ibutton6 = new Inside_Button(width/4*2+5,665,35,35);
-  ibutton7 = new Inside_Button(width/4*3+5,625,35,35);
-  ibutton8 = new Inside_Button(width/4*3+5,645,35,35);
-  ibutton9 = new Inside_Button(width/4*3+5,665,35,35);
+  ibutton1 = new Inside_Button(width/4*1-15,652,23,35);
+  ibutton2 = new Inside_Button(width/4*1-15,672,23,35);
+  ibutton3 = new Inside_Button(width/4*1-15,692,23,35);
+  ibutton4 = new Inside_Button(width/4*2-15,652,23,35);
+  ibutton5 = new Inside_Button(width/4*2-15,672,23,35);
+  ibutton6 = new Inside_Button(width/4*2-15,692,23,35);
+  ibutton7 = new Inside_Button(width/4*3-15,652,23,35);
+  ibutton8 = new Inside_Button(width/4*3-15,672,23,35);
+  ibutton9 = new Inside_Button(width/4*3-15,692,23,35);
   
 }
 
@@ -79,7 +79,7 @@ void draw() {
     ibutton9.draw();
     
   
-  //checks to turn off buttons
+  //checks to turn off outside buttons
   if(elevator1.floor == 100 || elevator2.floor == 100 || elevator3.floor == 100 && obutton1.on == true){
         obutton1.on = false;
   }
@@ -89,9 +89,95 @@ void draw() {
   else if(elevator1.floor == 500 || elevator2.floor == 500 || elevator3.floor == 500 && obutton3.on == true){
         obutton3.on = false;
   }
+  
+  //checks to turn off elevator 1 inside buttons
+  if(elevator1.floor == 500){
+    ibutton1.on = false;
+  }
+  else if(elevator1.floor == 300){
+    ibutton2.on = false;
+  }
+  else if(elevator1.floor == 100){
+    ibutton3.on = false;
+  }
+  
+  //checks to turn off elevator 2 inside buttons
+   if(elevator2.floor == 500){
+    ibutton4.on = false;
+  }
+  else if(elevator2.floor == 300){
+    ibutton5.on = false;
+  }
+  else if(elevator2.floor == 100){
+    ibutton6.on = false;
+  }
+  
+  //checks to turn off elevator 3 inside buttons
+  if(elevator3.floor == 500){
+    ibutton7.on = false;
+  }
+  else if(elevator3.floor == 300){
+    ibutton8.on = false;
+  }
+  else if(elevator3.floor == 100){
+    ibutton9.on = false;
+  }
+  
+  
 }
 
 void mousePressed(){
+  //internal panel 1 logic
+    if(ibutton1.isClicked() && elevator1.floor != 500){
+      ibutton1.on = true;
+      elevator1.target = 500;
+    }
+    else if(ibutton2.isClicked()&& elevator1.floor != 300)
+    {
+      ibutton2.on = true;
+      elevator1.target = 300;
+    }
+    else if(ibutton3.isClicked()&& elevator1.floor != 100)
+    {
+      ibutton3.on = true;
+      elevator1.target = 100;
+    }
+  
+  //internal panel 2 logic
+  if(ibutton4.isClicked() && elevator2.floor != 500){
+      ibutton4.on = true;
+      elevator2.target = 500;
+    }
+    else if(ibutton5.isClicked()&& elevator2.floor != 300)
+    {
+      ibutton5.on = true;
+      elevator2.target = 300;
+    }
+    else if(ibutton6.isClicked()&& elevator2.floor != 100)
+    {
+      ibutton6.on = true;
+      elevator2.target = 100;
+    }
+    
+      //internal panel 3 logic
+    if(ibutton7.isClicked() && elevator3.floor != 500){
+      ibutton7.on = true;
+      elevator3.target = 500;
+    }
+    else if(ibutton8.isClicked()&& elevator3.floor != 300)
+    {
+      ibutton8.on = true;
+      elevator3.target = 300;
+    }
+    else if(ibutton9.isClicked()&& elevator3.floor != 100)
+    {
+      ibutton9.on = true;
+      elevator3.target = 100;
+    }
+  
+  
+  
+  //external buttons logic
     if(obutton1.isClicked()){
      obutton1.on = true;
        if (elevator1.busy == false){
@@ -131,34 +217,5 @@ void mousePressed(){
        }
  
     }
- 
-    if(ibutton1.isClicked()){
-     ibutton1.on = true;
-    }
-    else if(ibutton2.isClicked()){
-     ibutton2.on = true;
-    }
-    else if(ibutton3.isClicked()){
-     ibutton3.on = true;
-    }
-    else if(ibutton4.isClicked()){
-     ibutton4.on = true;
-    }
-    else if(ibutton5.isClicked()){
-     ibutton5.on = true;
-    }
-    else if(ibutton6.isClicked()){
-     ibutton6.on = true;
-    }
-    else if(ibutton7.isClicked()){
-     ibutton7.on = true;
-    }
-    else if(ibutton8.isClicked()){
-     ibutton8.on = true;
-    }
-    else if(ibutton9.isClicked()){
-     ibutton9.on = true;
-    }
-    
     
 }

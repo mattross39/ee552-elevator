@@ -21,12 +21,12 @@ class Inside_Button{
   void draw(){
     if(on == true){
     fill(200);
-    circle(leftPos-10,topPos+45,btnWidth-20);
+    circle(leftPos+btnWidth/2,topPos+btnHeight/2,btnWidth-5);
       
     } else {
     fill(255);
-    circle(leftPos-10,topPos+45,btnWidth-20); 
-    }
+    circle(leftPos+btnWidth/2,topPos+btnHeight/2,btnWidth-5); 
     
   }
+}
 }
