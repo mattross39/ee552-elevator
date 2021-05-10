@@ -1,3 +1,7 @@
+import processing.sound.*;
+SoundFile[] file;
+int numsounds = 1;
+
 Elevator elevator1;
 Elevator elevator2;
 Elevator elevator3;
@@ -35,7 +39,10 @@ void setup() {
   ibutton7 = new Inside_Button(width/4*3-15,652,23,35);
   ibutton8 = new Inside_Button(width/4*3-15,672,23,35);
   ibutton9 = new Inside_Button(width/4*3-15,692,23,35);
-  
+  file = new SoundFile[numsounds];
+  for (int i = 0; i < numsounds; i++) {
+    file[i] = new SoundFile(this, (i+1) + ".mp3");
+  }
 }
 
 void draw() {
@@ -85,28 +92,35 @@ void draw() {
   }
   else if(elevator1.floor == 300 || elevator2.floor == 300 || elevator3.floor == 300 && obutton2.on == true){
         obutton2.on = false;
+        
   }
   else if(elevator1.floor == 500 || elevator2.floor == 500 || elevator3.floor == 500 && obutton3.on == true){
         obutton3.on = false;
+        
   }
   
   //checks to turn off elevator 1 inside buttons
   if(elevator1.floor == 500){
     ibutton1.on = false;
+    
   }
   else if(elevator1.floor == 300){
     ibutton2.on = false;
+    
   }
   else if(elevator1.floor == 100){
     ibutton3.on = false;
+    
   }
   
   //checks to turn off elevator 2 inside buttons
    if(elevator2.floor == 500){
     ibutton4.on = false;
+   
   }
   else if(elevator2.floor == 300){
     ibutton5.on = false;
+    
   }
   else if(elevator2.floor == 100){
     ibutton6.on = false;

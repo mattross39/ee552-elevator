@@ -4,7 +4,8 @@ class Elevator {
  public double target = 500;
  private double floor = 500;
  public boolean busy = false;
- private int timer =0;
+ private int timer = 0;
+ boolean alreadyPlayed = false;
  
  Elevator(int x){
    this.x = x;
@@ -24,20 +25,29 @@ class Elevator {
  }
  
  void draw(){
+   
     if (target < floor){
             busy = true;
             floor = floor - speed;
+            alreadyPlayed = false;
             
         } else if (target > floor) {
             busy = true;
             floor = floor + speed;
+            alreadyPlayed = false;
             
         } else{
           //busy = false;
               timer = timer + 1;
+              
               if(timer == 100){
                 timer = 0;
                 busy = false;
+              }
+              
+              if(alreadyPlayed == false){
+              file[0].play();
+              alreadyPlayed = true;
               }
         }
 
