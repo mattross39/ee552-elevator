@@ -1,3 +1,5 @@
+import java.util.Queue;
+import java.util.LinkedList;
 import processing.sound.*;
 SoundFile[] file;
 int numsounds = 1;
@@ -144,49 +146,49 @@ void mousePressed(){
   //internal panel 1 logic
     if(ibutton1.isClicked() && elevator1.floor != 500){
       ibutton1.on = true;
-      elevator1.target = 500;
+      elevator1.q.add(500);
     }
     else if(ibutton2.isClicked()&& elevator1.floor != 300)
     {
       ibutton2.on = true;
-      elevator1.target = 300;
+      elevator1.q.add(300);
     }
     else if(ibutton3.isClicked()&& elevator1.floor != 100)
     {
       ibutton3.on = true;
-      elevator1.target = 100;
+      elevator1.q.add(100);
     }
   
   //internal panel 2 logic
   if(ibutton4.isClicked() && elevator2.floor != 500){
       ibutton4.on = true;
-      elevator2.target = 500;
+      elevator2.q.add(500);
     }
     else if(ibutton5.isClicked()&& elevator2.floor != 300)
     {
       ibutton5.on = true;
-      elevator2.target = 300;
+      elevator2.q.add(300);
     }
     else if(ibutton6.isClicked()&& elevator2.floor != 100)
     {
       ibutton6.on = true;
-      elevator2.target = 100;
+      elevator2.q.add(100);
     }
     
       //internal panel 3 logic
     if(ibutton7.isClicked() && elevator3.floor != 500){
       ibutton7.on = true;
-      elevator3.target = 500;
+      elevator3.q.add(500);
     }
     else if(ibutton8.isClicked()&& elevator3.floor != 300)
     {
       ibutton8.on = true;
-      elevator3.target = 300;
+      elevator3.q.add(300);
     }
     else if(ibutton9.isClicked()&& elevator3.floor != 100)
     {
       ibutton9.on = true;
-      elevator3.target = 100;
+      elevator3.q.add(100);
     }
   
   
@@ -195,39 +197,39 @@ void mousePressed(){
     if(obutton1.isClicked()){
      obutton1.on = true;
        if (elevator1.busy == false){
-       elevator1.target = 100;
+       elevator1.q.add(100);
        }
        else if(elevator2.busy == false){
-       elevator2.target = 100;
+      elevator2.q.add(100);
        }
        else if(elevator3.busy == false){
-       elevator3.target = 100;
+       elevator3.q.add(100);
        }
  
     }
     else if(obutton2.isClicked()){
      obutton2.on = true;
       if (elevator1.busy == false){
-       elevator1.target = 300;
+       elevator1.q.add(300);
        }
        else if(elevator2.busy == false){
-       elevator2.target = 300;
+       elevator2.q.add(300);
        }
        else if(elevator3.busy == false){
-       elevator3.target = 300;
+       elevator3.q.add(300);
        }
        
     }
     else if(obutton3.isClicked()){
      obutton3.on = true;
      if (elevator1.busy == false){
-       elevator1.target = 500;
+       elevator1.q.add(500);
        }
        else if(elevator2.busy == false){
-       elevator2.target = 500;
+       elevator2.q.add(500);
        }
        else if(elevator3.busy == false){
-       elevator3.target = 500;
+       elevator3.q.add(500);
        }
  
     }
