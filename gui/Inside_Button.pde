@@ -20,7 +20,7 @@ class Inside_Button{
   
   void draw(){
     if(on == true){
-    fill(200);
+    fill(150);
     circle(leftPos+btnWidth/2,topPos+btnHeight/2,btnWidth-5);
       
     } else {

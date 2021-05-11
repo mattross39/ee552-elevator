@@ -9,6 +9,8 @@ class Elevator {
  public boolean busy = false;
  private int timer = 0;
  boolean alreadyPlayed = false;
+ boolean up = false;
+ boolean down = false;
  Queue<Integer> q = new LinkedList<Integer>();
  
  
@@ -36,17 +38,22 @@ class Elevator {
       target = q.element(); 
       
       if (target < floor){
+        up = true;
         busy = true;
         floor = floor - speed;
         alreadyPlayed = false;
         
+        
       } else if (target > floor) {
+        down = true;
         busy = true;
         floor = floor + speed;
         alreadyPlayed = false;
         
       } else{
           //busy = false;
+          down = false;
+          up = false;
           timer = timer + 1;
           
           if(timer == 100){

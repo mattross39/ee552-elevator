@@ -19,13 +19,13 @@ class Outside_Button {
   
   void draw(){
     if(on == true){
-      fill(255);
-      rect(leftPos, topPos, btnWidth, btnHeight);
       fill(200);
+      rect(leftPos, topPos, btnWidth, btnHeight);
+      fill(150);
       circle(leftPos+btnWidth/2,topPos+btnHeight/2,btnWidth-5);
       
     } else {
-      fill(255);
+      fill(200);
       rect(leftPos, topPos, btnWidth, btnHeight);
       fill(255);
       circle(leftPos+btnWidth/2,topPos+btnHeight/2,btnWidth-5);
