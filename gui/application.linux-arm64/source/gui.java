@@ -81,8 +81,10 @@ public void setup() {
   arrow8 = new Direction_Arrows(width/4*3+65,height/4*2-80);
   arrow9 = new Direction_Arrows(width/4*3+65,height/4*1-80);
   
-  file = new SoundFile(this, "ding.mp3");
-
+  //Change filename to "ding.mp3" if running through processing
+  //mp3 file doesn't get exported to source folder when exporting so the file path is accounted for here
+  
+  file = new SoundFile(this, "../../ding.mp3");
 }
 
 public void draw() {
@@ -446,8 +448,8 @@ class Elevator {
           }
           
           if(alreadyPlayed == false){
-          file.play();
-          alreadyPlayed = true;
+            file.play();
+            alreadyPlayed = true;
           }
         }
    }

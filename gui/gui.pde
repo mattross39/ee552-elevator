@@ -1,8 +1,7 @@
 import java.util.Queue;
 import java.util.LinkedList;
 import processing.sound.*;
-SoundFile[] file;
-int numsounds = 1;
+SoundFile file;
 
 Elevator elevator1;
 Elevator elevator2;
@@ -60,10 +59,10 @@ void setup() {
   arrow8 = new Direction_Arrows(width/4*3+65,height/4*2-80);
   arrow9 = new Direction_Arrows(width/4*3+65,height/4*1-80);
   
-  file = new SoundFile[numsounds];
-  for (int i = 0; i < numsounds; i++) {
-    file[i] = new SoundFile(this, (i+1) + ".mp3");
-  }
+  //Change filename to "ding.mp3" if running through processing
+  //mp3 file doesn't get exported to source folder when exporting so the file path is accounted for here
+  
+  file = new SoundFile(this, "../../ding.mp3");
 }
 
 void draw() {

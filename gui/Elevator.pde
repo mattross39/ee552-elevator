@@ -63,8 +63,8 @@ class Elevator {
           }
           
           if(alreadyPlayed == false){
-         // file[0].play();
-          alreadyPlayed = true;
+            file.play();
+            alreadyPlayed = true;
           }
         }
    }
